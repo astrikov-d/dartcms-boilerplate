@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}{{ site_settings.site_title }}</title>
+
+    {% block core_css %}
+        <link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    {% endblock %}
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="{% static 'js/lib/respond/respond.min.js' %}"></script>
+    <script src="{% static 'js/lib/shiv/html5shiv.js' %}"></script>
+    <![endif]-->
+
+    {% block inline_css %}{% endblock %}
+</head>
+<body>
+{% block body %}
+    <div id="id_wrapper">
+        {% block wrapper %}
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}
+
+{% block core_js %}
+    <script src="{% static 'js/lib/jquery/jquery-1.11.1.min.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+{% endblock %}
+{% block inline_js %}{% endblock %}
+</body>
+</html>
