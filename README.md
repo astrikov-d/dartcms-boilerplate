@@ -11,7 +11,7 @@ Features
 - Based on Django Framework
 - DartCMS (https://github.com/astrikov-d/dartcms) as content-management system
 - Bootstrap 3 as CSS framework
-- PostgreSQL as database. Why? Because I like it.
+- PostgreSQL as database. Why? Because it's awesome.
 - Subdomain based architecture. Your admin app will be on different domain (`admin` by default) that your public application part.
 
 
@@ -23,7 +23,7 @@ Quickstart
 - Cd into project root
 - Change git repository settings
 - Setup database
-- Change `conf.def.project_settings` and `conf.prod.project_settings` according to your needs
+- Change `conf.dev.project_settings` and `conf.prod.project_settings` according to your needs
 - Run `virtualenv --no-site-packages --prompt="(your project name)" venv && source venv/bin/activate`
 - Run `pip install -r ./requirements/base.txt` to setup all deps.
 - Run `python manage.py migrate`
